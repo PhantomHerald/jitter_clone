@@ -27,11 +27,24 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`antialiased`}
-      >
-        {children}
-      </body>
+      <head>
+        <link
+          rel="preload"
+          href="/fonts/lausanne/TWKLausanne-800.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin=""
+        />
+        <link
+          rel="preload"
+          href="/fonts/lausanne/TWKLausanne-600.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin=""
+        />
+      </head>
+
+      <body className="antialiased">{children}</body>
     </html>
   );
 }
