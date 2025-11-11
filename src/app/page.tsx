@@ -12,7 +12,7 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 // Sections
 
 import Hero from "@/src/sections/hero";
-
+import Customers from "../sections/customers";
 gsap.registerPlugin(
   ScrollTrigger,
   useGSAP,
@@ -30,6 +30,7 @@ export default function Home() {
       <main id="main">
         <div className=" mx-auto">
           <Hero />
+          <Customers/>
         </div>
       </main>
     </div>
