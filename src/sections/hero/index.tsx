@@ -27,8 +27,8 @@ export default function Hero() {
           </Link>
         </div>
 
-        <h2 className="hero-text lg:text-[80px] text-6xl font-extrabold tracking-[-2.4px] !leading-[90%] text-center text-dark">
-          Super <br className="md:hidden" /> Fast motion
+        <h2 className="hero-text text-[clamp(2.5rem,7vw,7rem)] font-extrabold tracking-[-2.4px] !leading-[90%] text-center text-dark leading-tight">
+          Super <br className="md:hidden" /> fast motion
           <br /> for every team
         </h2>
 
