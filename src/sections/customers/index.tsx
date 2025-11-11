@@ -25,7 +25,7 @@ export default function Customers() {
     <div
       ref={refs.scope}
       aria-hidden={true}
-      className="space-y-10 pt-[9] px-20"
+      className="space-y-10 pt-[9] px-0 md:px-20"
     >
       <p className="extratext text-[15px] text-dark text-center opacity-0">
         <strong>over 20,000 creative teams use jitter</strong>{" "}

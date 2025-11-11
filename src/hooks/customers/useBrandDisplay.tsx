@@ -81,23 +81,26 @@ export default function useBrandDisplay() {
         });
       });
 
-      mm.add("(max-width: 1023px)", () => {
-        gsap
-          .timeline({
-            scrollTrigger: {
-              trigger: ".wrapper",
-              start: "top bottom",
-              end: "bottom top",
-              toggleActions: "play pause play pause",
-            },
-          })
-         // .add(
-           // gsap.effects.infiniteSlide(".customers-marquee", {
-             // duration: 15,
-              //xPercent: -50,
-            //}),
-          //);
-      });
+     mm.add("(max-width: 1023px)", () => {
+  gsap
+    .timeline({
+      scrollTrigger: {
+        trigger: ".wrapper",
+        start: "top bottom",
+        end: "bottom top",
+        toggleActions: "play pause play pause",
+      },
+    })
+    .add(
+      gsap.to(".customers-marquee", {
+        xPercent: -50,
+        duration: 15,
+        ease: "none",
+        repeat: -1,
+      })
+    );
+});
+
 
       return () => {
         mm.revert();
