@@ -5,20 +5,29 @@ import { logoItems } from "@/src/data/logo_set";
 import useBrandDisplay from "@/src/hooks/customers/useBrandDisplay";
 import { useMemo } from "react";
 import { cn } from "@/src/utils/tailwind";
-
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 export default function Customers() {
   const { state, refs } = useBrandDisplay();
   const allLogos = useMemo(() => {
     return logoItems.flatMap((item) => item.images);
   }, []);
 
+  useGSAP(() => {
+    gsap.to(".extratext", {
+      opacity: 1,
+      duration: 1.5,
+      delay: 0.2,
+      ease: "power4.out",
+    });
+  }, []);
   return (
     <div
       ref={refs.scope}
       aria-hidden={true}
       className="space-y-10 pt-[9] px-20"
     >
-      <p className="text-[15px] text-dark text-center">
+      <p className="extratext text-[15px] text-dark text-center opacity-0">
         <strong>over 20,000 creative teams use jitter</strong>{" "}
         <span className="font-light">
           {" "}
